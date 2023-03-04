@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-	<title>Hello World</title>  
+	<title>Panic or Anxiety Attack?</title>  
 ]	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
@@ -38,7 +38,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	var anxiety_count = 0; //count increase for anxiety count
+	var panic_count = 0; // count increase for panic count
+	
+	function anxietyAdd(){
+		anxiety_count = anxiety_count + 1;	
+	}
+	
+	function panicAdd(){
+		panic_count = panic_count + 1;
+	}
+	
+	function results(){
+	var anxietyPercent = (anxiety_count)/4*100
+	
+	var panicPercent = (panic_count)/(4)*100
+	var resultText = document.getElementById("results");
+	resultText.innerHTML = "Probability it is anxiety =" + anxietyPercent + "<br> Probability it is a panic =" + panicPercent;
+		
+	}
+		
 
 </script>	
 
@@ -64,12 +83,109 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+	img, object{
+		max-height:90%;
+		max-width:90%;
+	}
 </style>
 
 <body>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<div id="header" class="w3-container w3-light-blue"> <!text added to upper section of page-->
+		<h1>Panic or Anxiety Attack?</h1>
+		
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Have you had an episode, but aren't sure what may have caused it? Answer a few questions that may help you find out.</p>
+		
+		<a href="#one" class="w3-btn w3-light-blue w3-round"> Let's get started </a>
+		
+		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes.</p>
+		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+		
+	<h2>panic or anxiety?</h2>
+.....<img src="https://images.prismic.io/cerebral/42857718-d8da-8a20-b8d1fdd31158_Panic%20Attacks.png?ixlib=gatsbyFP.....
+			  
+		  </div>
+			  
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-light-blue">
+	<h1>Question 1</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Was your episode's onset sudden, or did it build up over time?</p>
+	<a href="#two" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round"?Sudden</a>
+	<a href="#two" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Gradual</a>
+	
+</div>
+</div>
+	
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-light-blue">
+	<h1>Question 2</h1>
+	
+
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Were your symptoms intense (ex: sense of impeding doom, extreme difficulty breathing)? Or did you feel more restless with increased heart rate?</p>
+	<a href="#three" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Intense</a>
+	<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a>
+	
+</div>
+</div>
+	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-light-blue">
+	<h1>Question 3</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>How long did your episode last?</p>
+	<a href="#four" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Around 15 min</a>
+	<a href="#four" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">An increased period of time (hours,days, weeks)</a>
+		
+</div>
+</div>
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-light-blue">
+	<h1>Question 4</h1>
+			
+	</div>
+		
+<div id="content" class="w3-container">
+	<p>Have you had difficulty sleeping recently?</p>
+	<a href="#five" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Yes</a>
+	<a href="#five" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">No</a>
+</div>
+	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-light-blue">
+		<h1>Panic or Anxiety Attack?</h1>
+</div>
+	
+<div id="content" class="w3-container"
+	<p>     <p>
+<a href="#six" onclick="results();" class="w3-button w3-light-blue w3-round">Click here for results!</a>
+</div>
+	
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-light-blue">
+		<h1>Results</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p id="results"></p>
+</div>
+	
+<footer class="w3-bottom w3-container w3-light-blue">
+	<p>DIY!</p>
+</footer>
+	
+	
 	
 </body>
 </html>
