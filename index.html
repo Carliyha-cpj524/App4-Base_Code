@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-	<title>Panic or Anxiety Attack?</title>  
+	<title>Allergies or Bronchitis</title>  
 ]	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
@@ -38,23 +38,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var anxiety_count = 0; //count increase for anxiety count
-	var panic_count = 0; // count increase for panic count
+	var allergy_count = 0; //count increase for allergy count
+	var bronchitis_count = 0; // count increase for bronchitis count
 	
-	function anxietyAdd(){
-		anxiety_count = anxiety_count + 1;	
+	function allergyAdd(){
+		allergy_count = allergy_count + 1;	
 	}
 	
-	function panicAdd(){
-		panic_count = panic_count + 1;
+	function bronchitisAdd(){
+		bronchitis_count = bronchitis_count + 1;
 	}
 	
 	function results(){
-	var anxietyPercent = (anxiety_count)/4*100
+	var allergyPercent = (allergy_count)/4*100
 	
-	var panicPercent = (panic_count)/(4)*100
+	var bronchitisPercent = (bronchitis_count)/(4)*100
 	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is anxiety =" + anxietyPercent + "<br> Probability it is a panic =" + panicPercent;
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is bronchitis =" + bronchitisPercent;
 		
 	}
 		
@@ -92,46 +92,46 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 	
 <div id="header" class="w3-container w3-light-blue"> <!text added to upper section of page-->
-	<h1>Panic or Anxiety Attack?</h1>
+	<h1>Allergies or Bronchitis?</h1>
 		
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Have you had an episode, but aren't sure what may have caused it? Answer a few questions that may help you find out.</p>
+	<p>Are you wondering if you're seasonal allergies may be bronchitis. Choose the syptoms that best describe your sitation.</p>
 	
-	<a href="#one" class="w3-btn w3-light-blue w3-round"> Let's get started </a>
+	<a href="#one" class="w3-btn w3-light-purple w3-round"> Let's get started </a>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes.</p>
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 		
-	<h2>Is it Panic or Anxiety?</h2>
+	<h2>Is it Allergies or Bronchitis?</h2>
 	<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.baptistjax.com%2Fjuice%2Fstories%2Fmental-health%2Fpandemic-panic&psig=AOvVaw1OlKMMix5zq6yht0pqI03I&ust=1678000685020000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPDG5ujdwf0CFQAAAAAdAAAAABAE" alt="panic or anxiety picture">			  
  </div>
 			  
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-light-blue">
+	<div id="header" class="w3-container w3-light-purple">
 	<h1>Question 1</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Was your episode's onset sudden, or did it build up over time?</p>
-	<a href="#two" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Sudden</a>
-	<a href="#two" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Gradual</a>
+	<p>Does your symptoms cause chronic chest pressure & coughing?</p>
+	<a href="#two" onclick="allergyAdd();" class="w3-button w3-light-purple w3-round">No</a>
+	<a href="#two" onclick="bronchitisAdd();" class="w3-button w3-light-purple w3-round">Yes</a>
 	
 </div>
 </div>
 	
 <div class="page" id="two">
-	<div id="header" class="w3-container w3-light-blue">
+	<div id="header" class="w3-container w3-light-purple">
 	<h1>Question 2</h1>
 	
 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Were your symptoms intense (ex: sense of impeding doom, extreme difficulty breathing)? Or did you feel more restless with increased heart rate?</p>
-	<a href="#three" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Intense</a>
-	<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a>
+	<p>Does your symptoms include itchy eyes and a runny nose?</p>
+	<a href="#three" onclick="bronchitisAdd();" class="w3-button w3-light-purple w3-round">No</a>
+	<a href="#three" onclick="allergyAdd();" class="w3-button w3-light-purple w3-round">Yes</a>
 	
 </div>
 </div>
@@ -142,37 +142,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>How long did your episode last?</p>
-	<a href="#four" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Around 15 min</a>
-	<a href="#four" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">An increased period of time (hours,days, weeks)</a>
+	<p>Is your breathing occur more as wheezing or shortness of breath?</p>
+	<a href="#four" onclick="bronchitisAdd();" class="w3-button w3-light-purple w3-round">Shortness of Breath</a>
+	<a href="#four" onclick="allergyAdd();" class="w3-button w3-light-purple w3-round">Wheezing</a>
 		
 </div>
 </div>
 	
 <div class="page" id="four">
-	<div id="header" class="w3-container w3-light-blue">
+	<div id="header" class="w3-container w3-light-purple">
 	<h1>Question 4</h1>
 			
 	</div>
 		
 <div id="content" class="w3-container">
-	<p>Have you had difficulty sleeping recently?</p>
-	<a href="#five" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Yes</a>
-	<a href="#five" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">No</a>
+	<p>How often does headaches occur?</p>
+	<a href="#five" onclick="bronchitisAdd();" class="w3-button w3-light-blue w3-round">Frequently</a>
+	<a href="#five" onclick="allergyAdd();" class="w3-button w3-light-blue w3-round">Not at all</a>
 </div>
 	
 <div class="page" id="five">
-	<div id="header" class="w3-container w3-light-blue">
-		<h1>Panic or Anxiety Attack?</h1>
+	<div id="header" class="w3-container w3-light-purple">
+		<h1>Allergies or Bronchitis?</h1>
 </div>
 	
 <div id="content" class="w3-container"
 	<p>     <p>
-<a href="#six" onclick="results();" class="w3-button w3-light-blue w3-round">Click here for results!</a>
+<a href="#six" onclick="results();" class="w3-button w3-light-purple w3-round">Click here for results!</a>
 </div>
 	
 <div class="page" id="six">
-	<div id="header" class="w3-container w3-light-blue">
+	<div id="header" class="w3-container w3-light-purple">
 		<h1>Results</h1>
 </div>
 	
@@ -180,7 +180,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p id="results"></p>
 </div>
 	
-<footer class="w3-bottom w3-container w3-light-blue">
+<footer class="w3-bottom w3-container w3-light-purple">
 	<p>DIY!</p>
 </footer>
 	
